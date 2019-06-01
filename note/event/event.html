@@ -1,0 +1,457 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Event · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../module/module.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Node基础进阶学习笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" >
+            
+                <span>
+            
+                    
+                    Node
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../repl/REPL.html">
+            
+                <a href="../repl/REPL.html">
+            
+                    
+                    REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../timer/timer.html">
+            
+                <a href="../timer/timer.html">
+            
+                    
+                    Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../module/module.html">
+            
+                <a href="../module/module.html">
+            
+                    
+                    Module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.5" data-path="event.html">
+            
+                <a href="event.html">
+            
+                    
+                    Event
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+  
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Event</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h5 id="&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x673A;&#x5236;&#x53CA;&#x4E8B;&#x4EF6;&#x73AF;&#x673A;&#x5236;">&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x673A;&#x5236;&#x53CA;&#x4E8B;&#x4EF6;&#x73AF;&#x673A;&#x5236;</h5>
+<h6 id="eventemitter-&#x7C7B;">EventEmitter &#x7C7B;</h6>
+<p>&#x5728;Node.js&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x5404;&#x79CD;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7684;event&#x6A21;&#x5757;&#x4E2D;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;EventEmitter&#x7C7B;&#xFF0C;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x7684;&#x5BF9;&#x8C61;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x7EE7;&#x627F;&#x4E86;EventEmitter&#x7C7B;&#x7684;&#x5B50;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x3002;</p>
+<h6 id="eventemitter&#x7C7B;&#x7684;&#x5404;&#x79CD;&#x65B9;&#x6CD5;">EventEmitter&#x7C7B;&#x7684;&#x5404;&#x79CD;&#x65B9;&#x6CD5;</h6>
+<p>EventEmitter&#x7C7B;&#x7684;on&#x65B9;&#x6CD5;&#x6216;addListener&#x3002;
+&#x8FD9;&#x4FE9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x533A;&#x522B;&#x4EC5;&#x4EC5;&#x5728;&#x4E8E;&#x65B9;&#x6CD5;&#x540D;&#x800C;&#x5DF2;&#xFF0C;&#x5185;&#x90E8;&#x5B9E;&#x73B0;&#x540C;&#x6837;&#x7684;&#x5904;&#x7406;&#x3002;</p>
+<pre><code class="lang-js">emitter.on(event,listener)
+emitter.addlistener(evnet,listener)
+</code></pre>
+<p>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x6307;&#x5B9A;&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x8BE5;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7684;&#x51FD;&#x6570;&#x3002;
+event &#x5B9E;&#x73B0;</p>
+<pre><code class="lang-js">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">EventEmitter</span>(<span class="hljs-params"></span>)</span>{
+
+    <span class="hljs-comment">// &#x4F1A;&#x628A;&#x6240;&#x6709;&#x7684;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x51FD;&#x6570;&#x653E;&#x5728;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4E2D;&#x4FDD;&#x5B58;</span>
+    <span class="hljs-keyword">this</span>.events = {}
+    <span class="hljs-comment">// &#x7ED9;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;&#x76D1;&#x542C;&#x6307;&#x5B9A;10&#x4E2A;</span>
+    <span class="hljs-keyword">this</span>._maxListeners= <span class="hljs-number">10</span>
+}
+EventEmitter.prototype.setMaxListners = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">setMaxListners</span>)</span>{
+    <span class="hljs-keyword">this</span>._maxListeners =setMaxListners
+}
+<span class="hljs-comment">// &#x7ED9;&#x6307;&#x5B9A;&#x7684;&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;1.&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;2.&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x51FD;&#x6570;</span>
+EventEmitter.prototype.on = EventEmitter.prototype.addListener = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">type,listener</span>)</span>{
+
+    <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.events[type])
+    {
+        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.events[type].length!=<span class="hljs-number">0</span>&amp;&amp; <span class="hljs-keyword">this</span>.events[type].length&gt;<span class="hljs-keyword">this</span>._maxListeners)
+        {
+            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">`<span class="hljs-subst">${type}</span>&#x5927;&#x4E8E;<span class="hljs-subst">${this._maxListeners}</span>&#xFF0C;`</span>)
+        }
+        <span class="hljs-keyword">this</span>.events[type].push(listener)
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        <span class="hljs-comment">// &#x5982;&#x679C;&#x4EE5;&#x524D;&#x6CA1;&#x6709;&#x6DFB;&#x52A0;&#x5230;&#x6B21;&#x575A;&#x77F3;&#x7684;&#x76D1;&#x542C;&#x51FD;&#x6570;&#xFF0C;&#x5219;&#x8D4B;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</span>
+            <span class="hljs-keyword">this</span>.events[type] = [listener]
+    }
+}
+EventEmitter.prototype.emit = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">type,...rest</span>)</span>{
+                                                                                                                                                <span class="hljs-comment">// &#x7528;apply</span>
+    <span class="hljs-keyword">this</span>.events[type] &amp;&amp; <span class="hljs-keyword">this</span>.events[type].forEach(listener=&gt;listener.apply(<span class="hljs-keyword">this</span>,rest))
+}
+
+
+EventEmitter.prototype.once=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">type,listener</span>)</span>{
+
+    <span class="hljs-comment">// &#x7528;&#x5B8C;&#x9500;&#x6BC1;</span>
+    <span class="hljs-keyword">let</span> wrapper= (...res)=&gt;{
+        listener.apply(<span class="hljs-keyword">this</span>,rest)<span class="hljs-comment">//&#x5148;&#x8BA9;&#x539F;&#x59CB;&#x51FD;&#x6570;&#x6267;&#x884C;</span>
+        <span class="hljs-keyword">this</span>.removeListener(type,wrapper)
+    }
+    <span class="hljs-keyword">this</span>.on(type,wrapper)
+
+}
+EventEmitter.prototype.removeListener = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">type,listener</span>)</span>{
+    <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.events[type])
+    {
+        <span class="hljs-keyword">this</span>.events[type] =<span class="hljs-keyword">this</span>.events[type].filter(l=&gt;l!=listener)
+    }
+}
+
+<span class="hljs-comment">// &#x79FB;&#x9664;&#x6BCF;&#x4E2A;&#x4E8B;&#x4EF6;&#x7684;&#x6240;&#x4EE5;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x51FD;&#x6570;</span>
+EventEmitter.prototype.removeAllListeners = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">type</span>)</span>{
+    <span class="hljs-keyword">delete</span> <span class="hljs-keyword">this</span>.events[type]
+}
+EventEmitter.prototype.listeners = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.events[event]
+}
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x6240;&#x6709;&#x76D1;&#x542C;&#x51FD;&#x6570;&#x7684;&#x6570;&#x7EC4;</span>
+<span class="hljs-built_in">module</span>.exports = EventEmitter
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> EventEmitter = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;events&apos;</span>);
+<span class="hljs-keyword">let</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;util&apos;</span>)
+<span class="hljs-comment">// console.log(util)</span>
+util.inheritis(Parent,EventEmitter)
+<span class="hljs-comment">// &#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7C7B;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Parent</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-comment">// &#x7EE7;&#x627F;&#x79C1;&#x6709;&#x65B9;&#x6CD5;</span>
+    EventEmitter.call(<span class="hljs-keyword">this</span>)
+}
+<span class="hljs-comment">// &#x5B50;&#x7C7B;&#x7EE7;&#x627F;&#x7236;&#x7C7B;&#x7684;&#x516C;&#x7528;&#x65B9;&#x6CD5;</span>
+<span class="hljs-comment">// Object.setPrototypeOf(ctor.prototype, superCtor.prototype)</span>
+<span class="hljs-comment">// ctor.prototype.__proto__ = superCtor.prototype</span>
+<span class="hljs-comment">// &#x8FDB;&#x884C;&#x4E86;&#x539F;&#x578B;&#x7EE7;&#x627F;</span>
+<span class="hljs-comment">// &#x7EE7;&#x627F;&#x516C;&#x6709;&#x5C5E;&#x6027;</span>
+
+
+<span class="hljs-keyword">let</span> child = <span class="hljs-keyword">new</span> Parent()
+child.on(<span class="hljs-string">&apos;&apos;</span>)
+</code></pre>
+<h6 id="setimmediate-setinterval-settimeout">setImmediate setInterval setTimeout</h6>
+<p>// nextTick setImmediate &#x533A;&#x522B;&#x548C;&#x8054;&#x7CFB;
+// nextTick &#x628A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x653E;&#x5728;&#x5F53;&#x524D;&#x6267;&#x884C;&#x6808;&#x7684;&#x5E95;&#x90E8;&#xFF0C;
+// setImmediate &#x628A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x653E;&#x5728;&#x4E8B;&#x4EF6;&#x961F;&#x5217;&#x7684;&#x5C3E;&#x90E8;</p>
+<h6 id="nexttick">nextTick</h6>
+<p>nextTick &#x628A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x653E;&#x5728;&#x5F53;&#x524D;&#x6267;&#x884C;&#x6808;&#x7684;&#x5E95;&#x90E8;&#xFF0C;&#xFF08;&#x5176;&#x5B9E;&#x5FAE;&#x4EFB;&#x52A1;&#xFF09;
+ <br>
+process.nextTick()&#x65B9;&#x6CD5;&#x4F1A;&#x52A0;&#x5728;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;next tick queue&#x4E2D;&#xFF0C;<br>
+process.nextTick() &#x65B9;&#x6CD5;&#x5C06; callback &#x6DFB;&#x52A0;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#x7684;&#x961F;&#x5217;&#x3002; &#x4E00;&#x65E6;&#x5F53;&#x8F6E;&#x7684;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x5168;&#x90E8;&#x5B8C;&#x6210;&#xFF0C;&#x5219;&#x8C03;&#x7528;&#x4E0B;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#x7684;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x56DE;&#x8C03;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Super</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.listener;
+
+    <span class="hljs-keyword">this</span>.listener()
+}
+
+Super.prototype.add = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">listener</span>)</span>{
+    <span class="hljs-keyword">this</span>.listener = listener
+}
+<span class="hljs-comment">/*
+    &#x5F53;new Super&#x7684;&#x65F6;&#x5019; Super&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x5DF2;&#x7ECF;&#x6267;&#x884C;&#x4E86;&#x3002;
+    &#x518D;&#x8C03;&#x7528;&#x540E;&#x9762;&#x7684;add&#x51FD;&#x6570;&#x5DF2;&#x7ECF;&#x4E0D;&#x4F1A;&#x518D;&#x6267;&#x884C; &#x4E86;
+    &#x89E3;&#x51B3;&#x529E;&#x6CD5;
+
+ */</span>
+
+<span class="hljs-keyword">let</span> c = <span class="hljs-keyword">new</span> Super()
+
+c.add(()=&gt;{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;ok&apos;</span>)
+})
+
+<span class="hljs-comment">// &#x89E3;&#x51B3;&#x4F8B;&#x5B50;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">suber</span> (<span class="hljs-params"></span>)</span>{
+
+    <span class="hljs-keyword">this</span>.listener 
+    process.nextTick(()=&gt;{
+        <span class="hljs-keyword">this</span>.listener()
+    });
+
+}
+
+suber.prototype.add = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">listener</span>)</span>{
+    <span class="hljs-keyword">this</span>.listener = listener
+}
+
+<span class="hljs-keyword">let</span> d = <span class="hljs-keyword">new</span> suber();
+
+d.add(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;hello&apos;</span>)
+})
+</code></pre>
+<h6 id="setimmediate">setImmediate</h6>
+<p>setImmediate &#x628A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x653E;&#x5728;&#x4E8B;&#x4EF6;&#x961F;&#x5217;&#x7684;&#x5C3E;&#x90E8;<br>
+&#x56E0;&#x4E3A;&#x4E0D;&#x4F1A;&#x963B;&#x585E;&#x5F53;&#x524D;&#x6267;&#x884C;&#x6808;</p>
+<h6 id="util">util</h6>
+<p>&#x5B9E;&#x7528;&#x5DE5;&#x5177;</p>
+<ul>
+<li>&#x6709;inspect&#x7B49;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5BF9;&#x8C61;&#x51FD;&#x6570;&#x7684;&#x5C55;&#x5F00;&#x5C42;&#x7EA7;
+console.log(util.inspect(obj,{depth:2}))
+```js
+const util = require(&apos;util&apos;)
+var person={
+  name :&apos;12&apos;,
+  home: {country:&quot;China&quot;}
+}
+//depath&#x4E3A;&#x5C42;&#x7EA7;
+// &#x5B9A;&#x4E49;&#x4E3A;1&#x5C55;&#x793A;&#x5BF9;&#x8C61;&#x7684;1&#x4E2A;&#x5C42;&#x7EA7;
+// &#x5B9A;&#x4E49;&#x4E3A;2&#x5C55;&#x793A;&#x5BF9;&#x8C61;&#x7684;2&#x4E2A;&#x5C42;&#x7EA7;
+console.log(util.inspect(person,{depth:2}))</li>
+</ul>
+<p>```</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../module/module.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Module">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Event","level":"1.1.5","depth":2,"previous":{"title":"Module","level":"1.1.4","depth":2,"path":"note/module/module.md","ref":"note/module/module.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/event/event.md","mtime":"2019-06-01T10:26:17.294Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-01T10:26:30.463Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

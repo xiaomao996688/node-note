@@ -1,0 +1,455 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Module · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../event/event.html" />
+    
+    
+    <link rel="prev" href="../timer/timer.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Node基础进阶学习笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" >
+            
+                <span>
+            
+                    
+                    Node
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../repl/REPL.html">
+            
+                <a href="../repl/REPL.html">
+            
+                    
+                    REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../timer/timer.html">
+            
+                <a href="../timer/timer.html">
+            
+                    
+                    Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.4" data-path="module.html">
+            
+                <a href="module.html">
+            
+                    
+                    Module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../event/event.html">
+            
+                <a href="../event/event.html">
+            
+                    
+                    Event
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+ 
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Module</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h6 id="&#x6A21;&#x5757;">&#x6A21;&#x5757;</h6>
+<p>&#x6A21;&#x5757;&#x53D1;&#x5C55;</p>
+<ul>
+<li>0.&#x547D;&#x540D;&#x7A7A;&#x95F4;</li>
+<li>1.&#x95ED;&#x5305; &#x6267;&#x884C;&#x51FD;&#x6570;</li>
+<li>2.require.js AMD(&#x4E0D;&#x518D;&#x7EF4;&#x62A4;)&#x53EF;&#x4EE5;&#x4E86;&#x89E3;</li>
+<li>3.sea.js CMD(&#x4E0D;&#x518D;&#x7EF4;&#x62A4;)</li>
+<li>4.node.js common.js </li>
+<li>5.es6 module</li>
+<li>7.umd == amd+cmd_common+es+module
+<br></li>
+</ul>
+<p>&#x5728;Node.js&#x4E2D;&#xFF0C;&#x4EE5;&#x6A21;&#x5757;&#x4E3A;&#x5355;&#x4F4D;&#x5212;&#x5206;&#x6240;&#x6709;&#x529F;&#x80FD;&#x3002;&#x4E00;&#x4E2A;Node.js&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7531;&#x5927;&#x91CF;&#x7684;&#x6A21;&#x5757;&#x7EC4;&#x4EF6;&#xFF0C;&#x6CA1;&#x6709;&#x6A21;&#x5757;&#x90FD;&#x662F;&#x4E00;&#x4E2A;JavaScript&#x811A;&#x672C;&#x6587;&#x4EF6;&#x3002;
+<br>
+&#x5728;Node.js &#x4E2D;&#xFF0C;&#x6A21;&#x5757;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5B83;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5C06;&#x7B2C;&#x4E09;&#x65B9;&#x7C7B;&#x5E93;&#x5F15;&#x5165;&#x5230;&#x5916;&#x9762;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x3002;
+<br>
+&#x5728;Node.js&#x4E2D;&#xFF0C;&#x51E0;&#x79CD;&#x6A21;&#x5757;&#x6587;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li>1&#xFF09;&#x540E;&#x7F00;&#x540D;&#x4E3A;.js&#x7684;JavaScript&#x811A;&#x672C;&#x6587;&#x4EF6; </li>
+<li>2&#xFF09;&#x540E;&#x7F00;&#x540D;&#x4E3A;.json &#x7684;JSON&#x6587;&#x672C;&#x6587;&#x4EF6;&#x3002;</li>
+<li>3) &#x540E;&#x7F00;&#x540D;&#x4E3A;.node &#x7684;&#x7ECF;&#x8FC7;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6A21;&#x5757;&#x6587;&#x4EF6;<h6 id="1js&#x6A21;&#x5757;&#x5316;&#x89C4;&#x8303;">1.JS&#x6A21;&#x5757;&#x5316;&#x89C4;&#x8303;</h6>
+<h6 id="2commonjs&#x89C4;&#x8303;">2.CommonJS&#x89C4;&#x8303;</h6>
+&#x5C01;&#x88C5;&#x529F;&#x80FD;<br>
+&#x5C01;&#x95ED;&#x4F5C;&#x7528;&#x57DF;<br>
+&#x53EF;&#x80FD;&#x89E3;&#x51B3;&#x4F9D;&#x8D56;&#x95EE;&#x9898;<br>
+&#x5DE5;&#x4F5C;&#x6548;&#x7387;&#x66F4;&#x9AD8;&#xFF0C;&#x91CD;&#x6784;&#x65B9;&#x4FBF;<h6 id="node&#x4E2D;commonjs">Node&#x4E2D;CommonJS</h6>
+1.&#x5728;nodejs&#x91CC;&#x9762;&#x6BCF;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x6A21;&#x5757; 
+2.&#x901A;&#x8FC7;&#x8C03;&#x7528;require&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x6A21;&#x5757;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x7BA1;&#x7406; <h6 id="&#x6838;&#x5FC3;&#x6A21;&#x5757;&#x4E0E;&#x6587;&#x4EF6;&#x6A21;&#x5757;">&#x6838;&#x5FC3;&#x6A21;&#x5757;&#x4E0E;&#x6587;&#x4EF6;&#x6A21;&#x5757;</h6>
+&#x5728;Node.js&#x4E2D;&#xFF0C;&#x4EE5;&#x6A21;&#x5757;&#x4E3A;&#x5355;&#x4F4D;&#x5212;&#x5206;&#x6240;&#x6709;&#x529F;&#x80FD;&#x3002;
+&#x5728;nodejs&#x4E2D;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x662F;&#x540C;&#x6B65;&#x7684;&#x3002;</li>
+</ul>
+<ul>
+<li>1.&#x627E;&#x5230;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6; </li>
+<li>2.&#x8BFB;&#x53D6;&#x6B21;&#x6A21;&#x5757;&#x7684;&#x5185;&#x5BB9; </li>
+<li>3.&#x628A;&#x4ED6;&#x5C01;&#x88C5;&#x5728;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x91CC;&#x7ACB;&#x523B;&#x6267;&#x884C;</li>
+<li><p>4.&#x7136;&#x540E;&#x628A;&#x628A;&#x6A21;&#x5757;&#x7684;module.exports&#x5BF9;&#x8C61;&#x8D4B;&#x7ED9;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;</p>
+</li>
+<li><p>&#x4E3A;&#x4EC0;&#x4E48;node&#x662F;&#x540C;&#x6B65;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#xFF1F;<br>
+&#x56E0;&#x4E3A;&#x6709;&#x7F13;&#x5B58;&#xFF0C;&#x5F53;&#x7B2C;&#x4E00;&#x6B21;&#x52A0;&#x8F7D;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x7F13;&#x5B58;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x7684;exports&#x5BF9;&#x8C61;&#x3002;
+&#x4EE5;&#x540E;&#x5982;&#x679C;&#x518D;&#x6B21;&#x52A0;&#x8F7D;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x8BDD;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x4ECE;&#x7F13;&#x5B58;&#x4E2D;&#x53D6;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x6B21;&#x52A0;&#x8F7D;&#x4E86;
+&#x7F13;&#x5B58;&#x7684;key&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</p>
+<pre><code>console.log(require.cache)//&#x7F13;&#x5B58;&#x6587;&#x4EF6;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+console.log(module)
+Module:{
+id: &apos;.&apos;, //&#x5F53;&#x524D;&#x6A21;&#x5757;ID &#x5165;&#x53E3;&#x6A21;&#x5757;&#x7684;ID&#x6C38;&#x8FDC;&#x4E3A;.
+exports: {},//&#x5230;&#x5904;&#x5BF9;&#x8C61;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x5BF9;&#x8C61;
+parent: null,//&#x7236;&#x6A21;&#x5757; &#x6B64;&#x6A21;&#x5757;&#x662F;&#x8C01;&#x54EA;&#x4E2A;&#x6A21;&#x5757;&#x6765;&#x52A0;&#x8F7D;&#x7684;
+filename:&apos;E:\\node\\module\\test\\01.js&apos;,//&#x5F53;&#x524D;&#x6A21;&#x5757;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+loaded: false, //&#x662F;&#x5426;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;
+children: [],//&#x6B64;&#x6A21;&#x5757;&#x52A0;&#x8F7D;&#x4E86;&#x54EA;&#x4E9B;&#x6A21;&#x5757;
+paths: &#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#x7684;&#x67E5;&#x627E;&#x8DEF;&#x5F84;
+ [ &apos;E:\\node\\module\\test\\node_modules&apos;,
+   &apos;E:\\node\\module\\node_modules&apos;,
+   &apos;E:\\node\\node_modules&apos;,
+   &apos;E:\\node_modules&apos; ] }
+</code></pre><h6 id="require">require</h6>
+<p>require&#x51FD;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x53C2;&#x6570;&#x503C;&#x53EF;&#x4EE5;&#x4E3A;&#x5E26;&#x6709;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#x7684;&#x6A21;&#x5757;&#x6587;&#x4EF6;&#x540D;,&#x4E5F;&#x53EF;&#x4EE5;&#x4E3A;&#x6A21;&#x5757;&#x540D;&#x3002;
+&#x4F1A;&#x5148;&#x627E;file,&#x627E;&#x4E0D;&#x5230;&#x4F1A;&#x627E;file.js&#x5982;&#x679C;&#x8FD8;&#x627E;&#x4E0D;&#x5230;file.json,&#x5982;&#x679C;&#x8FD8;&#x627E;&#x4E0D;&#x5230;&#x7EE7;&#x7EED;&#x627E;file.node</p>
+<pre><code>console.log(require)
+{ [Function: require]
+resolve: { [Function: resolve] paths: [Function: paths] },//&#x5F53;&#x60F3;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x4F46;&#x53C8;&#x4E0D;&#x60F3;&#x53BB;&#x52A0;&#x8F7D;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;
+main: //&#x6307;&#x7684;&#x662F;&#x5165;&#x53E3;&#x6A21;&#x5757; require.main() &#x6587;&#x4EF6;&#x8DEF;&#x5F84;
+ Module {
+   id: &apos;.&apos;,
+   exports: {},
+   parent: null,
+   filename: &apos;E:\\node-note\\exmaple\\module\\01.js&apos;,
+   loaded: false,
+   children: [],
+   paths: 
+    [ &apos;E:\\node-note\\exmaple\\module\\node_modules&apos;,
+      &apos;E:\\node-note\\exmaple\\node_modules&apos;,
+      &apos;E:\\node-note\\node_modules&apos;,
+      &apos;E:\\node_modules&apos; ] },
+extensions: { &apos;.js&apos;: [Function], &apos;.json&apos;: [Function], &apos;.node&apos;: [Function] },
+cache: 
+ { &apos;E:\\node-note\\exmaple\\module\\01.js&apos;: 
+    Module {
+      id: &apos;.&apos;,
+      exports: {},
+      parent: null,
+      filename: &apos;E:\\node-note\\exmaple\\module\\01.js&apos;,
+      loaded: false,
+      children: [],
+      paths: [Array] } } }
+</code></pre><p>//&#x5728;node&#x91CC;&#x6A21;&#x5757;&#x7C7B;&#x578B;&#x6709;&#x4E09;&#x79CD;
+1.js&#x6A21;&#x5757;  &#x662F;require&#x52A0;&#x8F7D;&#x7684;
+2.json&#x6A21;&#x5757;  &#x4E5F;&#x662F;&#x901A;&#x8FC7;require
+3.node C++&#x6269;&#x5C55;&#x4E8C;&#x8FDB;&#x5236;&#x6A21;&#x5757; 
+extensions&#x662F;&#x4E0D;&#x540C;&#x6A21;&#x5757;&#x7684;&#x52A0;&#x8F7D;&#x51FD;&#x6570;
+<br>
+&#x6A21;&#x5757;&#x5728;&#x9996;&#x6B21;&#x52A0;&#x8F7D;&#x540E;&#x5C06;&#x7F13;&#x5B58;&#x5230;&#x5185;&#x5B58;&#x533A;&#x4E2D;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x8FD9;&#xFF0C;&#x5BF9;&#x4E8E;&#x76F8;&#x540C;&#x6A21;&#x5757;&#x591A;&#x6B21;&#x5F15;&#x7528;&#x5F97;&#x5230;&#x7684;&#x90FD;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x5BF9;&#x8C61;&#x3002;
+<br>
+&#x5BF9;&#x4E8E;&#x76F8;&#x540C;&#x6A21;&#x5757;&#x7684;&#x591A;&#x6B21;&#x5F15;&#x7528;&#x4E0D;&#x4F1A;&#x5F15;&#x8D77;&#x6A21;&#x5757;&#x5185;&#x4EE3;&#x7801;&#x7684;&#x591A;&#x6B21;&#x6267;&#x884C;
+```js
+// &#x6587;&#x4EF6;app.js 
+const testModule = require(&apos;./testModule.js&apos;)
+const testModule1= require(&apos;./testModule.js&apos;)</p>
+</li>
+</ul>
+<p>//&#x53EF;&#x4EE5;&#x7A7F;&#x4F20;&#x53C2;&#x6570;
+testModule.outputTestVar(&apos;moult&apos;)
+testModule1.outputTestVar(&apos;aaaa&apos;);</p>
+<p>testModule.js
+var outputTestVar =function  outputTestVar(args){</p>
+<p>}
+exports.testVar = testVar;
+exports.outputTestVar=outputTestVar</p>
+<pre><code>* require.resolve()
+&#x5728;Node.js&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;require.resovle&#x51FD;&#x6570;&#x6765;&#x67E5;&#x8BE2;&#x67D0;&#x4E2A;&#x6A21;&#x5757;&#x6587;&#x4EF6;&#x5E26;&#x6709;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002;
+```js
+
+require(&apos;./test.js&apos;)
+</code></pre><ul>
+<li>require.cache
+&#x5728;Node.js&#x4E2D;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;require.cache&#x5BF9;&#x8C61;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#xFF0C;&#x4EE3;&#x8868;&#x7F13;&#x5B58;&#x4E86;&#x6240;&#x4EE5;&#x5DF2;&#x88AB;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x7684;&#x7F13;&#x5B58;&#x53BB;&#x3002;&#x5728;REPL&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;console.log(require.cache);&#x8868;&#x8FBE;&#x5F0F;&#x6765;&#x67E5;&#x770B;&#x7F13;&#x5B58;&#x533A;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x3002;</li>
+</ul>
+<h6 id="&#x6A21;&#x5757;&#x5206;&#x7C7B;">&#x6A21;&#x5757;&#x5206;&#x7C7B;</h6>
+<ul>
+<li>&#x539F;&#x751F;&#x6A21;&#x5757;
+http path fs util events&#x7F16;&#x8BD1;&#x6210;&#x4E8C;&#x8FDB;&#x5236;&#x52A0;&#x8F7D;&#xFF0C;&#x52A0;&#x8F7D;&#x901F;&#x5EA6;&#x6700;&#x5FEB;&#xFF0C;&#x539F;&#x6765;&#x6A21;&#x5757;&#x901A;&#x8FC7;&#x540D;&#x79F0;&#x6765;&#x52A0;&#x8F7D;
+&#x5185;&#x7F6E;&#x6A21;&#x5757;&#x653E;&#x5728;&#x4E86;node.exe&#x4E4B;&#x4E2D;</li>
+<li><p>&#x6587;&#x4EF6;&#x6A21;&#x5757;
+&#x5728;&#x786C;&#x76D8;&#x67D0;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;&#x52A0;&#x8F7D;&#x901F;&#x5EA6;&#x975E;&#x5E38;&#x5FEB;&#xFF0C;&#x6587;&#x4EF6;&#x6A21;&#x5757;&#x901A;&#x8FC7;&#x540D;&#x79F0;&#x6216;&#x8DEF;&#x5F84;&#x6765;&#x52A0;&#x8F7D;&#x6587;&#x4EF6;&#xFF0C;&#x6587;&#x4EF6;&#x6A21;&#x5757;&#x7684;&#x540E;&#x7F00;&#x6709;&#x4E09;&#x79CD;(js,json,node)</p>
+<ul>
+<li>js&#x9700;&#x8981;&#x5148;&#x8BFB;&#x53D6;&#x5185;&#x5B58;&#x518D;&#x8FD0;&#x884C;</li>
+</ul>
+</li>
+<li><p>require&#x52A0;&#x6A21;&#x5757;<br>
+1.&#x68C0;&#x6D4B;&#x662F;&#x5426;&#x5728;&#x7F13;&#x5B58;&#x4E2D;&#xFF0C;<br>
+2.&#x7136;&#x540E;&#x770B;&#x539F;&#x751F;&#x6A21;&#x5757; 
+```js 
+let load = require(&apos;load&apos;)
+//&#x5F53;&#x524D;&#x6A21;&#x5757;&#x7684;&#x67E5;&#x627E;&#x8DEF;&#x5F84;&#x5168;&#x5C40;&#x7684;&#x6A21;&#x5757;&#x8DEF;&#x5F84;
+//&#x4F1A;&#x627E;&#x5230;module.paths 
+paths: </p>
+<pre><code>[ &apos;E:\\node\\module\\test\\node_modules&apos;,
+  &apos;E:\\node\\module\\node_modules&apos;,
+  &apos;E:\\node\\node_modules&apos;,
+  &apos;E:\\node_modules&apos; ] },
+</code></pre><p>//global module 
+//&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;&#x7684;NODE_PATH&#x6307;&#x5411;&#x7684;&#x76EE;&#x5F55;</p>
+</li>
+</ul>
+<pre><code>
+######  &#x4ECE;&#x6A21;&#x5757;&#x5916;&#x90E8;&#x8BBF;&#x95EE;&#x6A21;&#x5757;&#x5185;&#x90E8;&#x7684;&#x6210;&#x5458;
+* &#x4F7F;&#x7528;exports&#x5BF9;&#x8C61;
+&#x5728;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x672C;&#x5730;(&#x5373;&#x975E;&#x51FD;&#x6570;&#x5185;&#x5B9A;&#x4E49;&#x7684;)&#x53D8;&#x91CF;&#x3001;&#x51FD;&#x6570;&#x6216;&#x5BF9;&#x8C61;&#x53EA;&#x5728;&#x8BE5;&#x6A21;&#x5757;&#x5185;&#x6709;&#x6548;&#xFF0C;&#x5F53;&#x4F60;&#x8981;&#x60F3;&#x4ECE;&#x6A21;&#x5757;&#x5916;&#x90E8;&#x5F15;&#x7528;&#x8FD9;&#x4E9B;&#x53D8;&#x91CF;&#x3001;&#x51FD;&#x6570;&#x6216;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x8BE5;&#x6A21;&#x5757;&#x6587;&#x4EF6;&#x5185;&#x4F7F;&#x7528;exports&#x5BF9;&#x8C61;&#x3002;
+```js
+ var myMSG= &apos;heelo&apos;
+ var functionname = function (){
+     return &apos;i m functionname function&apos;
+ };
+ exports.msg = myMsg;
+ exports.funcname =functionname
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../timer/timer.html" class="navigation navigation-prev " aria-label="Previous page: Timer">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../event/event.html" class="navigation navigation-next " aria-label="Next page: Event">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Module","level":"1.1.4","depth":2,"next":{"title":"Event","level":"1.1.5","depth":2,"path":"note/event/event.md","ref":"note/event/event.md","articles":[]},"previous":{"title":"Timer","level":"1.1.3","depth":2,"path":"note/timer/timer.md","ref":"note/timer/timer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/module/module.md","mtime":"2019-06-01T10:03:32.065Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-01T10:26:30.463Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

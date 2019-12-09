@@ -1,0 +1,498 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Encoding · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../console/console.html" />
+    
+    
+    <link rel="prev" href="../global/global.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Node基础进阶学习笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../npm/npm.html">
+            
+                <a href="../npm/npm.html">
+            
+                    
+                    NPM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../repl/REPL.html">
+            
+                <a href="../repl/REPL.html">
+            
+                    
+                    REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../timer/timer.html">
+            
+                <a href="../timer/timer.html">
+            
+                    
+                    Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../module/module.html">
+            
+                <a href="../module/module.html">
+            
+                    
+                    Module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../event/event.html">
+            
+                <a href="../event/event.html">
+            
+                    
+                    Event
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../microtask/task.html">
+            
+                <a href="../microtask/task.html">
+            
+                    
+                    Micortask
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="../global/global.html">
+            
+                <a href="../global/global.html">
+            
+                    
+                    Global
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.8" data-path="encoding.html">
+            
+                <a href="encoding.html">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="../console/console.html">
+            
+                <a href="../console/console.html">
+            
+                    
+                    Console
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="../nextTick/nextTick.html">
+            
+                <a href="../nextTick/nextTick.html">
+            
+                    
+                    nextTick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="../buffer/buffer.html">
+            
+                <a href="../buffer/buffer.html">
+            
+                    
+                    Buffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.12" data-path="../stream/stream.html">
+            
+                <a href="../stream/stream.html">
+            
+                    
+                    Stream
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Encoding</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5B57;&#x7B26;&#x53D1;&#x5C55;&#x5386;&#x53F2;">&#x5B57;&#x7B26;&#x53D1;&#x5C55;&#x5386;&#x53F2;</h1>
+<h2 id="&#x5B57;&#x8282;">&#x5B57;&#x8282;</h2>
+<ul>
+<li>&#x8BA1;&#x7B97;&#x673A;&#x5185;&#x90E8;&#xFF0C;&#x6240;&#x6709;&#x4FE1;&#x606F;&#x6700;&#x7EC8;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;</li>
+<li>&#x6BCF;&#x4E00;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x4F4D;(bit)&#x6709;0&#x548C;1&#x4FE9;&#x79CD;&#x72B6;&#x6001;&#xFF0C;&#x56E0;&#x6B64;&#x8865;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x5C31;&#x53EF;&#x4EE5;&#x7EC4;&#x5408;&#x6210;256&#x79CD;&#x72B6;&#x6001;&#xFF0C;&#x8FD9;&#x88AB;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;&#x5B57;&#x8282;(byte) 
+8&#x4F4D;2&#x8FDB;&#x5236;&#x6570;&#x6700;&#x5C0F;&#x662F;0000000&#x7B49;&#x4E8E;0
+&#x6700;&#x5927;&#x7684;&#x662F;11111111 &#x7B49;&#x4E8E;2^7+2^6+2^5+2^4+2^3+2^2+2^1+2^0=255
+0&#x2014;&#x5230;255&#x4E00;&#x5171;&#x662F;256&#x4E2A;&#x6570;<h2 id="&#x5355;&#x4F4D;">&#x5355;&#x4F4D;</h2>
+8&#x4F4D;(bit) = 1&#x5B57;&#x8282;(byte)
+1024&#x5B57;&#x8282; = 1k
+1024k = 1M
+1024M = 1G
+1024G = 1T</li>
+</ul>
+<h2 id="&#x8FDB;&#x5236;&#x8F6C;&#x6362;">&#x8FDB;&#x5236;&#x8F6C;&#x6362;</h2>
+<p>0b&#x5F00;&#x5934;&#x662F;&#x4E8C;&#x8FDB;&#x5236;
+0o&#x5F00;&#x5934;&#x662F;&#x516B;&#x8FDB;&#x5236;
+0x&#x5F00;&#x5934;&#x662F;&#x5341;&#x516D;&#x8FDB;&#x5236;
+&#x5341;&#x8FDB;&#x5236;&#x5C31;&#x5E73;&#x5E38;0123456789&#x5F00;&#x5934;&#x90FD;&#x884C;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x4EFB;&#x610F;&#x8FDB;&#x5236;&#x8F6C;&#x6362;&#x4E3A;10&#x8FDB;&#x5236;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&apos;0x14&apos;</span>,<span class="hljs-number">16</span>))
+
+<span class="hljs-comment">// &#x5341;&#x8FDB;&#x5236;&#x8F6C;&#x4EFB;&#x610F;&#x8FDB;&#x5236;</span>
+
+<span class="hljs-keyword">let</span> c = <span class="hljs-number">10</span>;
+<span class="hljs-built_in">console</span>.log(c.toString(<span class="hljs-number">2</span>));
+</code></pre>
+<h2 id="ascii">ASCII</h2>
+<p>&#x8BA1;&#x7B97;&#x673A;&#x6700;&#x5F00;&#x59CB;&#x5728;&#x7F8E;&#x56FD;&#x5F00;&#x59CB;&#x4F7F;&#x7528;&#xFF0C;&#x516B;&#x4F4D;&#x7684;&#x5B57;&#x8282;&#x53EF;&#x4EE5;&#x7EC4;&#x5408;&#x6210;256&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x72B6;&#x6001;&#x3002;0-32&#x79CD;&#x72B6;&#x6001;&#x89C4;&#x5B9A;&#x4E86;&#x7279;&#x4FD7;&#x7528;&#x9014;&#xFF0C;&#x4E00;&#x65E6;&#x7EC8;&#x7AEF;&#x3001;&#x6253;&#x5370;&#x673A;&#x9047;&#x4E0A;&#x7EA6;&#x5B9A;&#x597D;&#x7684;&#x8FD9;&#x4E9B;&#x5B57;&#x8282;&#x88AB;&#x4F20;&#x8FC7;&#x6765;&#x65F6;&#xFF0C;&#x5C31;&#x8981;&#x505A;&#x4E00;&#x4E9B;&#x7EA6;&#x5B9A;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;&#x5982;&#xFF1A;<br>
+&#x9047;&#x4E0A;0x10&#xFF0C;&#x7EC8;&#x7AEF;&#x6362;&#x884C;<br>
+&#x9047;&#x4E0A;0x07&#xFF0C;&#x7EC8;&#x7AEF;&#x60F3;&#x4EBA;&#x4EEC;&#x561F;&#x561F;&#x53EB;<br>
+&#x53C8;&#x628A;&#x6240;&#x6709;&#x7684;&#x7A7A;&#x683C;&#x3001;&#x6807;&#x70B9;&#x7B26;&#x53F7;&#x3001;&#x6570;&#x5B57;&#x3001;&#x5927;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x5206;&#x522B;&#x7528;&#x8FDE;&#x7EED;&#x7684;&#x5B57;&#x8282;&#x72B6;&#x6001;&#x8868;&#x793A;&#xFF0C;&#x4E00;&#x53EA;&#x7F16;&#x5230;127&#xFF0C;&#x8FD9;&#x6837;&#x8BA1;&#x7B97;&#x673A;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x4E0D;&#x540C;&#x5B57;&#x8282;&#x6765;&#x5B58;&#x50A8;&#x82F1;&#x8BED;&#x7684;&#x6587;&#x5B57;&#x4E86;&#x3002;<br>
+&#x8FD9;128&#x8FD9;&#x4E2A;&#x7B26;&#x53F7;(&#x5305;&#x62EC;32&#x4E2A;&#x4E0D;&#x80FD;&#x6253;&#x5370;&#x51FA;&#x6765;&#x7684;&#x63A7;&#x5236;&#x7B26;&#x53F7;)&#xFF0C;&#x53EA;&#x5360;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x540E;&#x9762;7&#x4F4D;&#xFF0C;&#x6700;&#x524D;&#x9762;&#x7684;&#x4E00;&#x53EA;&#x7EDF;&#x4E00;&#x89C4;&#x5B9A;&#x4E3A;0. <br>
+<a href="https://baike.baidu.com/pic/ASCII/309296/0/e850352ac65c103880a07b53bc119313b17e8941?fr=lemma&amp;ct=single#aid=0&amp;pic=e850352ac65c103880a07b53bc119313b17e8941" target="_blank">ASCLL&#x8868;</a><br>
+&#x8FD9;&#x4E2A;&#x65B9;&#x6848;&#x53EB;&#x505A;ASCLL(American Standard Code for Information Interchange:&#x7F8E;&#x56FD;&#x4FE1;&#x606F;&#x4E92;&#x6362;&#x6807;&#x51C6;&#x4EE3;&#x7801;)&#x7F16;&#x7801;</p>
+<h2 id="gb2312">GB2312</h2>
+<p>&#x5F88;&#x591A;&#x56FD;&#x5BB6;&#x7528;&#x7684;&#x90FD;&#x4E0D;&#x662F;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#xFF0C;&#x4ED6;&#x4EEC;&#x7684;&#x5B57;&#x6BCD;&#x5728;&#x5728;ASCII&#x91CC;&#x9762;&#x6CA1;&#x6709;&#xFF0C;&#x4E3A;&#x4E86;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x4ED6;&#x4EEC;&#x7684;&#x6587;&#x5B57;&#xFF0C;&#x4ED6;&#x4EEC;&#x4F7F;&#x7528;127&#x53F7;&#x8FD9;&#x540E;&#x7684;&#x7A7A;&#x4F4D;&#x6765;&#x4FDD;&#x5B58;&#x65B0;&#x7684;&#x5B57;&#x6BCD;&#xFF0C;&#x4E00;&#x76F4;&#x7F16;&#x5230;&#x4E86;&#x6700;&#x540E;&#x4E00;&#x4F4D;255&#x3002;</p>
+<blockquote>
+<p>&#x4ECE;128&#x5230;255&#x8FD9;&#x4E00;&#x9875;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x88AB;&#x79F0;&#x4E3A;&#x6269;&#x5C55;&#x5B57;&#x7B26;&#x96C6;
+<br>
+&#x4E2D;&#x56FD;&#x4E3A;&#x4E86;&#x8868;&#x793A;&#x6C49;&#x5B57;&#xFF0C;&#x628A;127&#x4E4B;&#x540E;&#x7684;&#x7B26;&#x53F7;&#x53D6;&#x6D88;&#x4E86;&#xFF0C;&#x89C4;&#x5B9A;</p>
+</blockquote>
+<ul>
+<li><p>&#x4E00;&#x4E2A;&#x5C0F;&#x4E8E;127&#x7684;&#x5B57;&#x7B26;&#x7684;&#x610F;&#x4E49;&#x4E0E;&#x539F;&#x6765;&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x662F;&#x5927;&#x4E8E;127&#x7684;&#x5B57;&#x7B26;&#x5728;&#x4E00;&#x8D77;&#x65F6;&#xFF0C;&#x5C31;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x6C49;&#x5B57;</p>
+</li>
+<li><p>&#x524D;&#x9762;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x8282;(&#x4E5F;&#x79F0;&#x4E3A;&#x9AD8;&#x5B57;&#x8282;)&#x4ECE;0xA1&#x5230;0xF7&#xFF0C;&#x540E;&#x9762;&#x4E00;&#x4E2A;&#x5B57;&#x8282;(&#x4F4E;&#x5B57;&#x8282;)&#x4ECE;0xA1&#x5230;0xFE&#xFF1B;</p>
+</li>
+<li><p>&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x7EC4;&#x5408;&#x51FA;&#x5927;&#x7EA6;7000&#x591A;&#x4E2A;(247-161)*(254-161)=7998&#x4E2A;&#x7B80;&#x4F53;&#x6C49;&#x5B57;&#x4E86;</p>
+</li>
+<li><p>&#x8FD8;&#x628A;&#x6570;&#x5B57;&#x7B26;&#x53F7;&#x3001;&#x65E5;&#x6587;&#x5047;&#x540D;&#x548C;ASCII&#x91CC;&#x539F;&#x6765;&#x5C31;&#x6709;&#x7684;&#x6570;&#x5B57;&#x3001;&#x6807;&#x70B9;&#x548C;&#x5B57;&#x6BCD;&#x90FD;&#x91CD;&#x65B0;&#x7F16;&#x6210;&#x4E24;&#x4E2A;&#x5B57;&#x957F;&#x7684;&#x7F16;&#x7801;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x5168;&#x89D2;&#x5B57;&#x7B26;&#xFF0C;127&#x4EE5;&#x4E0B;&#x90A3;&#x4E9B;&#x5C31;&#x53EB;&#x534A;&#x89D2;&#x5B57;&#x7B26;&#x3002;</p>
+</li>
+</ul>
+<p>&#x8FD9;&#x79CD;&#x6C49;&#x5B57;&#x65B9;&#x6848;&#x53EB;&#x505A;GB2312&#x3002;GB2312&#x662F;&#x5BF9;ASCII&#x7684;&#x4E2D;&#x6587;&#x6269;&#x5C55;</p>
+<h2 id="gbk">GBK</h2>
+<p>&#x540E;&#x6765;&#x6C49;&#x5B57;&#x4E0D;&#x591F;&#x7528;&#xFF0C;&#x4E8E;&#x662F;&#x8981;&#x6C42;&#x5427;&#x4F4E;&#x5B57;&#x8282;&#x4E00;&#x5B9A;&#x662F;127&#x53F7;&#x4E4B;&#x540E;&#x7684;&#x5185;&#x7801;&#xFF0C;&#x53EA;&#x8981;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x5927;&#x4E8E;127&#x5C31;&#x662F;&#x56FA;&#x5B9A;&#x8868;&#x793A;&#x8FD9;&#x4E2A;&#x662F;&#x4E00;&#x4E2A;&#x6C49;&#x5B57;&#x7684;&#x5F00;&#x59CB;&#xFF0C;&#x53C8;&#x589E;&#x52A0;&#x4E86;&#x8FD1;20000&#x4E2A;&#x65B0;&#x7684;&#x6C49;&#x5B57;(&#x5305;&#x62EC;&#x7E41;&#x4F53;&#x5B57;)&#x548C;&#x7B26;&#x53F7;&#x3002;</p>
+<h2 id="gb18030dbcs">GB18030/DBCS</h2>
+<p>&#x540E;&#x6765;&#x53C8;&#x589E;&#x52A0;&#x4E86;&#x5C11;&#x6570;&#x540D;&#x65CF;&#x7684;&#x5B57;&#xFF0C;GBK&#x6269;&#x5C55;&#x6210;&#x4E86;GB18030&#x901A;&#x79F0;&#x53EB;&#x4F5C;DBCS</p>
+<blockquote>
+<p>Double Byte Character Set:&#x53CC;&#x5B57;&#x8282;&#x5B57;&#x7B26;&#x96C6;&#x3002;
+<br>
+&#x5728;DBCS&#x7CFB;&#x5217;&#x6807;&#x51C6;&#x91CC;&#xFF0C;&#x6700;&#x5927;&#x7684;&#x7279;&#x70B9;&#x662F;&#x4FE9;&#x4E2A;&#x5B57;&#x8282;&#x957F;&#x7684;&#x6C49;&#x5B57;&#x5B57;&#x7B26;&#x548C;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x957F;&#x7684;&#x82F1;&#x6587;&#x5B57;&#x7B26;&#x5E76;&#x5B58;&#x4E8E;&#x540C;&#x4E00;&#x5957;&#x7F16;&#x7801;&#x65B9;&#x6848;&#x91CC;&#xFF0C;&#x5404;&#x4E2A;&#x56FD;&#x5BB6;&#x90FD;&#x50CF;&#x4E2D;&#x56FD;&#x4E00;&#x76F4;&#x641E;&#x51FA;&#x4E86;&#x81EA;&#x5DF1;&#x7684;&#x7F16;&#x7801;&#x6807;&#x51C6;&#xFF0C;&#x7ED3;&#x679C;&#x76F8;&#x4E92;&#x4E4B;&#x95F4;&#x8C01;&#x4E5F;&#x4E0D;&#x61C2;&#x8C01;&#x7684;&#x7F16;&#x7801;&#xFF0C;&#x8C01;&#x4E5F;&#x4E0D;&#x652F;&#x6301;&#x8C01;&#x7684;&#x7F16;&#x7801;&#x3002;</p>
+</blockquote>
+<h2 id="unicode">Unicode</h2>
+<p>ISO(International Organization for Standardizaiton)&#x56FD;&#x9645;&#x6807;&#x51C6;&#x5316;&#x7EC4;&#x7EC7;&#x5E9F;&#x5F03;&#x4E86;&#x6240;&#x6709;&#x5730;&#x533A;&#x6027;&#x7684;&#x7F16;&#x7801;&#x65B9;&#x6848;&#xFF0C;&#x91CD;&#x65B0;&#x641E;&#x4E00;&#x4E2A;&#x5305;&#x62EC;&#x5730;&#x7403;&#x4E0A;&#x6240;&#x6709;&#x6587;&#x5316;&#x3001;&#x6240;&#x6709;&#x5B57;&#x6BCD;&#x548C;&#x5B57;&#x7B26;&#x7684;&#x7F16;&#x7801;&#x3002;<br>
+Unicode(Universal Multiple-Octet Coded Character Set:&#x7B80;&#x79F0;USC&#xFF0C;&#x4FD7;&#x79F0;Unicode)&#x7F16;&#x7801;&#x5C31;&#x51FA;&#x73B0;&#x4E86;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x5927;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x73B0;&#x5728;&#x89C4;&#x6A21;&#x53EF;&#x4EE5;&#x5BB9;&#x7EB3;100&#x591A;&#x4E07;&#x4E2A;&#x7B26;&#x53F7;&#x3002;
+<br>
+ISO &#x5C31;&#x76F4;&#x63A5;&#x89C4;&#x5B9A;&#x5FC5;&#x987B;&#x7528;&#x4E24;&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; 16 &#x4F4D;&#x6765;&#x7EDF;&#x4E00;&#x8868;&#x793A;&#x6240;&#x6709;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x5BF9;&#x4E8E; ASCII &#x91CC;&#x7684;&#x90A3;&#x4E9B; &#x534A;&#x89D2;&#x5B57;&#x7B26;&#xFF0C;Unicode &#x4FDD;&#x6301;&#x5176;&#x539F;&#x7F16;&#x7801;&#x4E0D;&#x53D8;&#xFF0C;&#x53EA;&#x662F;&#x5C06;&#x5176;&#x957F;&#x5EA6;&#x7531;&#x539F;&#x6765;&#x7684; 8 &#x4F4D;&#x6269;&#x5C55;&#x4E3A;16 &#x4F4D;&#xFF0C;&#x800C;&#x5176;&#x4ED6;&#x6587;&#x5316;&#x548C;&#x8BED;&#x8A00;&#x7684;&#x5B57;&#x7B26;&#x5219;&#x5168;&#x90E8;&#x91CD;&#x65B0;&#x7EDF;&#x4E00;&#x7F16;&#x7801;&#x3002;
+<br>
+&#x4ECE; Unicode &#x5F00;&#x59CB;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x534A;&#x89D2;&#x7684;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#xFF0C;&#x8FD8;&#x662F;&#x5168;&#x89D2;&#x7684;&#x6C49;&#x5B57;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x662F;&#x7EDF;&#x4E00;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF01;&#x540C;&#x65F6;&#xFF0C;&#x4E5F;&#x90FD;&#x662F;&#x7EDF;&#x4E00;&#x7684; &#x4E24;&#x4E2A;&#x5B57;&#x8282;&#x3002;</p>
+<h2 id="utf-8">UTF-8</h2>
+<p>Unicode &#x5728;&#x5F88;&#x957F;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x5185;&#x65E0;&#x6CD5;&#x63A8;&#x5E7F;&#xFF0C;&#x76F4;&#x5230;&#x4E92;&#x8054;&#x7F51;&#x7684;&#x51FA;&#x73B0;&#xFF0C;&#x4E3A;&#x89E3;&#x51B3; Unicode &#x5982;&#x4F55;&#x5728;&#x7F51;&#x7EDC;&#x4E0A;&#x4F20;&#x8F93;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4E8E;&#x662F;&#x9762;&#x5411;&#x4F20;&#x8F93;&#x7684;UTF &#x6807;&#x51C6;&#x51FA;&#x73B0;&#x4E86;&#xFF0C;</p>
+<blockquote>
+<p>Universal Character Set&#xFF08;UCS&#xFF09;Transfer Format&#xFF1A;UTF&#x7F16;&#x7801;</p>
+</blockquote>
+<ul>
+<li><p>UTF-8 &#x5C31;&#x662F;&#x5728;&#x4E92;&#x8054;&#x7F51;&#x4E0A;&#x4F7F;&#x7528;&#x6700;&#x5E7F;&#x7684;&#x4E00;&#x79CD; Unicode &#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;</p>
+</li>
+<li><p>UTF-8&#x5C31;&#x662F;&#x6BCF;&#x6B21;&#x4EE5;8&#x4E2A;&#x4F4D;&#x4E3A;&#x5355;&#x4F4D;&#x4F20;&#x8F93;&#x6570;&#x636E;</p>
+</li>
+<li><p>UTF-16&#x5C31;&#x662F;&#x6BCF;&#x6B21; 16 &#x4E2A;&#x4F4D;</p>
+</li>
+<li><p>UTF-8 &#x6700;&#x5927;&#x7684;&#x4E00;&#x4E2A;&#x7279;&#x70B9;&#xFF0C;&#x5C31;&#x662F;&#x5B83;&#x662F;&#x4E00;&#x79CD;&#x53D8;&#x957F;&#x7684;&#x7F16;&#x7801;&#x65B9;&#x5F0F;</p>
+</li>
+<li><p>Unicode &#x4E00;&#x4E2A;&#x4E2D;&#x6587;&#x5B57;&#x7B26;&#x5360; 2 &#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x800C; UTF-8 &#x4E00;&#x4E2A;&#x4E2D;&#x6587;&#x5B57;&#x7B26;&#x5360; 3 &#x4E2A;&#x5B57;&#x8282;</p>
+</li>
+<li><p>UTF-8 &#x662F; Unicode &#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x4E4B;&#x4E00;</p>
+</li>
+</ul>
+<h3 id="&#x7F16;&#x7801;&#x89C4;&#x5219;">&#x7F16;&#x7801;&#x89C4;&#x5219;</h3>
+<p>1.&#x5BF9;&#x4E8E;&#x5355;&#x5B57;&#x8282;&#x7684;&#x7B26;&#x53F7;,&#x5B57;&#x8282;&#x7684;&#x7B2C;&#x4E00;&#x4F4D;&#x8BBE;&#x4E3A;0&#xFF0C;&#x540E;&#x9762;7&#x4F4D;&#x4E3A;&#x8FD9;&#x4E2A;&#x7B26;&#x53F7;&#x7684;Unicode&#x7801;&#x3002;&#x56E0;&#x6B64;&#x5BF9;&#x4E8E;&#x82F1;&#x8BED;&#x5B57;&#x6BCD;&#xFF0C;UTF-8 &#x7F16;&#x7801;&#x548C; ASCII &#x7801;&#x662F;&#x76F8;&#x540C;&#x7684;&#x3002;<br>
+2.&#x5BF9;&#x4E8E;n&#x5B57;&#x8282;&#x7684;&#x7B26;&#x53F7;&#xFF08;n &gt; 1&#xFF09;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x524D;n&#x4F4D;&#x90FD;&#x8BBE;&#x4E3A;1&#xFF0C;&#x7B2C;n+ 1&#x4F4D;&#x8BBE;&#x4E3A;0&#xFF0C;&#x540E;&#x9762;&#x5B57;&#x8282;&#x7684;&#x524D;&#x4E24;&#x4F4D;&#x4E00;&#x5F8B;&#x8BBE;&#x4E3A;10&#x3002;&#x5269;&#x4E0B;&#x7684;&#x6CA1;&#x6709;&#x63D0;&#x53CA;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x4F4D;&#xFF0C;&#x5168;&#x90E8;&#x4E3A;&#x8FD9;&#x4E2A;&#x7B26;&#x53F7;&#x7684; Unicode &#x7801;&#x3002;</p>
+<pre><code>Unicode&#x7B26;&#x53F7;&#x8303;&#x56F4;     |        UTF-8&#x7F16;&#x7801;&#x65B9;&#x5F0F;
+(&#x5341;&#x516D;&#x8FDB;&#x5236;)          |              &#xFF08;&#x4E8C;&#x8FDB;&#x5236;&#xFF09;
+----------------------+---------------------------------------------
+0000 0000-0000 007F | 0xxxxxxx
+0000 0080-0000 07FF | 110xxxxx 10xxxxxx
+0000 0800-0000 FFFF | 1110xxxx 10xxxxxx 10xxxxxx
+0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
+
+                                            //&#x5982;&#x679C;&#x662F;&#x5355;&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x5F00;&#x5934;&#x7F16;&#x7801;&#x8BBE;&#x7F6E;&#x4E3A;0
+                                            //&#x5982;&#x679C;&#x662F;&#x4FE9;&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x5F00;&#x5934;&#x7F16;&#x7801;&#x8BBE;&#x7F6E;&#x4FE9;&#x4E2A;110&#x5F00;&#x5934;
+                                            //&#x5982;&#x679C;&#x662F;&#x4E09;&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x5F00;&#x5934;&#x7F16;&#x7801;&#x8BBE;&#x7F6E;&#x4FE9;&#x4E2A;1110&#x5F00;&#x5934;
+                                            //&#x5982;&#x679C;&#x662F;&#x56DB;&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x5F00;&#x5934;&#x7F16;&#x7801;&#x8BBE;&#x7F6E;&#x4FE9;&#x4E2A;11110&#x5F00;&#x5934;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../global/global.html" class="navigation navigation-prev " aria-label="Previous page: Global">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../console/console.html" class="navigation navigation-next " aria-label="Next page: Console">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Encoding","level":"1.1.8","depth":2,"next":{"title":"Console","level":"1.1.9","depth":2,"path":"note/console/console.md","ref":"note/console/console.md","articles":[]},"previous":{"title":"Global","level":"1.1.7","depth":2,"path":"note/global/global.md","ref":"note/global/global.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/encoding/encoding.md","mtime":"2019-12-09T04:07:27.263Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-09T04:25:44.180Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

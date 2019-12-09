@@ -1,0 +1,493 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Console · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../nextTick/nextTick.html" />
+    
+    
+    <link rel="prev" href="../encoding/encoding.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Node基础进阶学习笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../npm/npm.html">
+            
+                <a href="../npm/npm.html">
+            
+                    
+                    NPM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../repl/REPL.html">
+            
+                <a href="../repl/REPL.html">
+            
+                    
+                    REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../timer/timer.html">
+            
+                <a href="../timer/timer.html">
+            
+                    
+                    Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../module/module.html">
+            
+                <a href="../module/module.html">
+            
+                    
+                    Module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../event/event.html">
+            
+                <a href="../event/event.html">
+            
+                    
+                    Event
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../microtask/task.html">
+            
+                <a href="../microtask/task.html">
+            
+                    
+                    Micortask
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="../global/global.html">
+            
+                <a href="../global/global.html">
+            
+                    
+                    Global
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="../encoding/encoding.html">
+            
+                <a href="../encoding/encoding.html">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.9" data-path="console.html">
+            
+                <a href="console.html">
+            
+                    
+                    Console
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="../nextTick/nextTick.html">
+            
+                <a href="../nextTick/nextTick.html">
+            
+                    
+                    nextTick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="../buffer/buffer.html">
+            
+                <a href="../buffer/buffer.html">
+            
+                    
+                    Buffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.12" data-path="../stream/stream.html">
+            
+                <a href="../stream/stream.html">
+            
+                    
+                    Stream
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Console</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h6 id="nodejs&#x4E2D;&#x7684;&#x63A7;&#x5236;&#x53F0;">Node.js&#x4E2D;&#x7684;&#x63A7;&#x5236;&#x53F0;</h6>
+<p>console.log&#x5BF9;&#x8C61;&#x4EE3;&#x8868;&#x63A7;&#x5236;&#x53F0;(&#x5728;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x8868;&#x73B0;&#x5F62;&#x5F0F;&#x4E3A;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x754C;&#x9762;)</p>
+<h6 id="console">console</h6>
+<ul>
+<li><p>console.log &#x5411;&#x63A7;&#x5236;&#x53F0;&#x6253;&#x5370;&#x65E5;&#x5FD7;</p>
+</li>
+<li><p>console.error &#x5411;&#x63A7;&#x5236;&#x53F0;&#x6253;&#x5370;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;</p>
+</li>
+<li>console.dir &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x67E5;&#x770B;&#x5BF9;&#x8C61;&#x5185;&#x5BB9;&#x5E76;&#x5C06;&#x5176;&#x8F93;&#x51FA;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x3002;<pre><code class="lang-js"><span class="hljs-keyword">var</span> a = {
+  b:<span class="hljs-number">1</span>,
+  c:<span class="hljs-number">2</span>
+}
+<span class="hljs-built_in">console</span>.dir(a)<span class="hljs-comment">//{ b: 1, c: 2 }</span>
+</code></pre>
+</li>
+<li><p>console.time &#x4E0E; console.timerEnd 
+&#x8FD9;&#x4FE9;&#x4E2A;&#x65B9;&#x6CD5;&#x914D;&#x5408;&#x4F7F;&#x7528;&#xFF0C;time&#x7528;&#x4E8E;&#x6807;&#x8BB0;&#x5F00;&#x59CB;&#x65F6;&#x95F4;
+end&#x7528;&#x4E8E;&#x6807;&#x8BB0;&#x7ED3;&#x675F;&#x65F6;&#x95F4;&#x3002;&#x6700;&#x540E;&#x8F93;&#x51FA;&#x7684;&#x65F6;&#x95F4;&#x4E3A;time&#x4E0E;end&#x4E4B;&#x95F4;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+</li>
+<li><p>console.trace &#x7528;&#x4E8E;&#x5C06;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x5904;&#x7684;&#x6808;&#x4FE1;&#x606F;&#x4F5C;&#x4E3A;&#x6807;&#x51C6;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x8FDB;&#x884C;&#x8F93;&#x51FA;
+trace&#x8DDF;&#x8E2A;
+```js</p>
+<blockquote>
+<p>var user= new Object()
+undefined
+user.name =&apos;Hello&apos;
+&apos;Hello&apos;
+user.getName = function (){
+... return this.name
+... }
+[Function]
+user.setName = function (){
+... this.name = name
+... }
+[Function]
+console.trace(&apos;trace&apos;)
+Trace: trace
+  at repl:1:9
+  at Script.runInContext (vm.js:74:29)
+  at REPLServer.defaultEval (repl.js:246:29)
+  at bound (domain.js:375:14)
+  at REPLServer.runBound [as eval] (domain.js:388:12)
+  at REPLServer.onLine (repl.js:492:10)
+  at REPLServer.emit (events.js:180:13)
+  at REPLServer.emit (domain.js:421:20)
+  at REPLServer.Interface._onLine (readline.js:285:10)
+  at REPLServer.Interface._line (readline.js:638:8)
+undefined</p>
+</blockquote>
+</li>
+</ul>
+<pre><code>
+* console.assert 
+&#x7528;&#x4E8E;&#x5BF9;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x8BC4;&#x4F30;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4E3A;false&#xFF0C;&#x5219;&#x8F93;&#x51FA;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#x5B57;&#x7B26;&#x4E32;&#x7206;&#x51FA;AssertionError&#x5F02;&#x5E38;
+```js
+&gt; console.assert(1==a,&apos;this is Error&apos;)
+AssertionError [ERR_ASSERTION]: this is Error
+    at Console.assert (console.js:197:23)
+&gt;
+</code></pre><h5 id="&#x6253;&#x5370;&#x65E5;&#x5FD7;&#x653E;&#x5165;&#x6587;&#x4EF6;&#x4E4B;&#x4E2D;">&#x6253;&#x5370;&#x65E5;&#x5FD7;&#x653E;&#x5165;&#x6587;&#x4EF6;&#x4E4B;&#x4E2D;</h5>
+<pre><code class="lang-js">&#x65B0;&#x5EFA;&#x6587;&#x4EF6;<span class="hljs-built_in">console</span>.js 
+&#x6587;&#x4EF6;&#x5185;&#x8F93;&#x5165;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;1&apos;</span>)
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;2&apos;</span>)
+&#x5207;&#x6362;&#x5230;cmd
+&#x8F93;&#x5165;&#x547D;&#x4EE4; &#xFF1A;node <span class="hljs-built_in">console</span>.js &gt; a.log 
+&#x8FD9;&#x6837;&#x4F1A;&#x628A;&#x8F93;&#x51FA;&#x5165;&#x7684;&#x65E5;&#x5FD7;
+<span class="hljs-number">1</span> 
+<span class="hljs-number">2</span> 
+&#x5B58;&#x653E;&#x5728;&#x5F53;&#x524D;&#x76EE;&#x4E0B;&#x7684;a.log &#x4E2D;
+&gt; &#x4EE3;&#x8868;&#xFF08;&#x6CA1;&#x6709;&#x9519;&#x8BEF;&#x7684;&#x65E5;&#x5FD7;&#xFF09;&#x5BFC;&#x5165;a.log&#xFF0C;&#x9ED8;&#x8BA4;&#x7701;&#x7565;&#x4E86;<span class="hljs-number">1</span>
+node <span class="hljs-built_in">console</span>.js <span class="hljs-number">1</span>&gt; a.log
+<span class="hljs-string">`
+</span></code></pre>
+<pre><code class="lang-js">&#x65B0;&#x5EFA;&#x6587;&#x4EF6; error.js 
+&#x6587;&#x4EF6;&#x5185;&#x8F93;&#x5165;
+<span class="hljs-built_in">console</span>.warn(<span class="hljs-number">2</span>)
+<span class="hljs-built_in">console</span>.error(<span class="hljs-number">2</span>)
+&#x5207;&#x6362;&#x5230; cmd 
+&#x8F93;&#x5165;&#x547D;&#x4EE4; :node error.js <span class="hljs-number">2</span> &gt; b.log 
+<span class="hljs-number">2</span>
+<span class="hljs-number">2</span>
+&#x4F1A;&#x628A;&#x2018;<span class="hljs-number">22</span>&#x2019;&#x8F93;&#x5165;&#x5230;b.log &#x4E2D;
+<span class="hljs-number">2</span>&gt; <span class="hljs-number">2</span>&#x4EE3;&#x8868;&#x628A;&#x9519;&#x8BEF;&#x8F93;&#x6216;&#x8B66;&#x544A;&#x8F93;&#x51FA;
+_________________________
+
+&#x5207;&#x6362;&#x5230;cmd 
+&#x8F93;&#x5165;&#x547D;&#x4EE4; &#xFF1A; node error.js <span class="hljs-number">1</span>&gt; a.log <span class="hljs-number">2</span>&gt;&amp;<span class="hljs-number">1</span> 
+<span class="hljs-number">2</span>&#x4EE3;&#x8868;&#x9519;&#x8BEF;&#x8F93;&#x51FA; &#x91CD;&#x65B0;&#x5B9A;&#x5411;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x5165;<span class="hljs-number">1</span>&#x4E2D;
+<span class="hljs-string">`
+</span></code></pre>
+<p>&#x7A0B;&#x5E8F;&#x662F;&#x4ECE;&#x4E0A;&#x5230;&#x4E0B;&#x4E00;&#x884C;&#x4E00;&#x884C;&#x7684;&#x6267;&#x884C;
+&#x6808;&#x662F;&#x5148;&#x8FDB;&#x540E;&#x51FA;&#x7684;&#x3002;</p>
+<!-- 栈 -->
+<p>3
+2
+1</p>
+<p>&#x2014;&#x2014;&#x300B;3&#x5148;&#x51FA;&#x53BB;&#x7136;&#x540E;2&#x51FA;&#x53BB;&#xFF0C;&#x6700;&#x540E;1</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../encoding/encoding.html" class="navigation navigation-prev " aria-label="Previous page: Encoding">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../nextTick/nextTick.html" class="navigation navigation-next " aria-label="Next page: nextTick">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Console","level":"1.1.9","depth":2,"next":{"title":"nextTick","level":"1.1.10","depth":2,"path":"note/nextTick/nextTick.md","ref":"note/nextTick/nextTick.md","articles":[]},"previous":{"title":"Encoding","level":"1.1.8","depth":2,"path":"note/encoding/encoding.md","ref":"note/encoding/encoding.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/console/console.md","mtime":"2019-12-09T04:09:20.128Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-09T04:25:44.180Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

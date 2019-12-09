@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>REPL · GitBook</title>
+        <title>MICROTASK · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../timer/timer.html" />
+    <link rel="next" href="../global/global.html" />
     
     
-    <link rel="prev" href="../npm/npm.html" />
+    <link rel="prev" href="../event/event.html" />
     
 
     </head>
@@ -116,9 +116,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.1.2" data-path="REPL.html">
+        <li class="chapter " data-level="1.1.2" data-path="../repl/REPL.html">
             
-                <a href="REPL.html">
+                <a href="../repl/REPL.html">
             
                     
                     REPL
@@ -168,9 +168,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.6" data-path="../microtask/task.html">
+        <li class="chapter active" data-level="1.1.6" data-path="task.html">
             
-                <a href="../microtask/task.html">
+                <a href="task.html">
             
                     
                     MICROTASK
@@ -229,7 +229,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >REPL</a>
+        <a href="../.." >MICROTASK</a>
     </h1>
 </div>
 
@@ -244,37 +244,55 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h5 id="replread-eval-print-loop&#x53EF;&#x4EA4;&#x4E92;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x3002;">REPL(read-eval-print-loop)&#x53EF;&#x4EA4;&#x4E92;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x3002;</h5>
-<p>REPL&#x73AF;&#x5883;&#x5185;&#x90E8;&#x4F7F;&#x7528;eval&#x51FD;&#x6570;&#x6765;&#x8BC4;&#x4F30;&#x6539;&#x8868;&#x793A;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
-<h6 id="&#x5728;repl&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4E2D;&#x4F7F;&#x7528;&#x4E0B;&#x5212;&#x7EBF;&#x5B57;&#x7B26;&#x3002;">&#x5728;REPL&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4E2D;&#x4F7F;&#x7528;&#x4E0B;&#x5212;&#x7EBF;&#x5B57;&#x7B26;&#x3002;</h6>
-<p>&#x5728;repl&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0B;&#x5212;&#x7EBF;&#x5B57;&#x7B26;&#x7684;&#x4F7F;&#x7528;&#x6765;&#x8BBF;&#x95EE;&#x6700;&#x8FD1;&#x4F7F;&#x7528;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x3002;</p>
-<h6 id="&#x5728;repl&#x73AF;&#x5883;&#x4E2D;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x51FD;&#x6570;">&#x5728;repl&#x73AF;&#x5883;&#x4E2D;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x51FD;&#x6570;</h6>
-<p>&#x53EF;&#x4EE5;&#x5728;repel&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4E2D;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x67D0;&#x4E2A;&#x51FD;&#x6570;&#x3002;&#x5728;REPL&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x8868;&#x793A;&#x5206;&#x4E3A;&#x591A;&#x884C;&#x8FDB;&#x884C;&#x4E66;&#x5199;&#xFF0C;
-&#x5F53;&#x8BE5;&#x8868;&#x8FBE;&#x5F0F;&#x672A;&#x5B8C;&#x6210;&#x65F6;&#xFF0C;REPL&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x5C06;&#x4E3A;&#x6539;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x6BCF;&#x4E00;&#x884C;&#xFF0C;&#x9664;&#x7B2C;&#x4E00;&#x884C;&#x5916;&#x6DFB;&#x52A0;&#x82F1;&#x6587;&#x7701;&#x7565;&#x7B26;(&#x4E09;&#x4E2A;&#x5C0F;&#x5706;&#x70B9;)</p>
-<h6 id="repl-&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x5BF9;&#x8C61;&#x3002;">REPL &#x8FD0;&#x884C;&#x73AF;&#x5883;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x5BF9;&#x8C61;&#x3002;</h6>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> repl = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;repl&apos;</span>)
+                                <h2 id="&#x5B8F;&#x4EFB;&#x52A1;">&#x5B8F;&#x4EFB;&#x52A1;</h2>
+<p>JavaScript(&#x4E3B;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;)&#x3001;setTimeout&#x3001;setInterval /setImmediate I/O&#x64CD;&#x4F5C; UI&#x6E32;&#x67D3;&#x3001;requsetAnimationFrame</p>
+<h2 id="&#x5FAE;&#x4EFB;&#x52A1;">&#x5FAE;&#x4EFB;&#x52A1;</h2>
+<p>MuationObsever precess.nextTick() muation Object.observe</p>
+<h2 id="demo-&#x6267;&#x884C;&#x987A;&#x5E8F;">demo &#x6267;&#x884C;&#x987A;&#x5E8F;</h2>
+<pre><code class="lang-js"><span class="hljs-built_in">console</span>.info(<span class="hljs-string">&apos;main1&apos;</span>);
 
-<span class="hljs-keyword">var</span> con = repl.start().context;
+process.nextTick(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.info(<span class="hljs-string">&apos;process.nextTick1&apos;</span>); <span class="hljs-comment">// &#x5FAE;&#x4EFB;&#x52A1; </span>
+});
 
-con.msg=<span class="hljs-string">&quot;&#x793A;&#x4F8B;&#x6D88;&#x606F;&quot;</span>
+setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.info(<span class="hljs-string">&apos;setTimeout&apos;</span>);
+    process.nextTick(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-built_in">console</span>.info(<span class="hljs-string">&apos;process.nextTick&apos;</span>);
+    });
+}, <span class="hljs-number">0</span>);
 
-con.testFunction = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)</span>{
-    <span class="hljs-built_in">console</span>.log(con.msg)
-}
+
+<span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>)</span>{ <span class="hljs-comment">// &#x5FAE;&#x4EFB;&#x52A1;</span>
+    <span class="hljs-built_in">console</span>.info(<span class="hljs-string">&apos;promise&apos;</span>);
+    resolve()
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.info(<span class="hljs-string">&apos;promise then&apos;</span>);
+})
+
+<span class="hljs-built_in">console</span>.info(<span class="hljs-string">&apos;main2&apos;</span>);
 </code></pre>
-<h6 id="repl-&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x57FA;&#x7840;&#x547D;&#x4EE4;">REPL &#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x57FA;&#x7840;&#x547D;&#x4EE4;</h6>
-<ul>
-<li>.break &#x5F53;&#x4F60;&#x4E66;&#x5199;&#x4E00;&#x4E2A;&#x591A;&#x884C;&#x51FD;&#x6570;&#x7684;&#x4E2D;&#x9014;&#x60F3;&#x8981;&#x653E;&#x5F03;&#x4E66;&#x5199;&#x6216;&#x91CD;&#x65B0;&#x4E66;&#x5199;&#x8BE5;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x53EF;&#x8BE5;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x70E6;&#x4F60;&#x8FD4;&#x56DE;&#x5230;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;&#x7684;&#x8D77;&#x70B9;&#x5904;&#xFF0C;&#x4F7F;&#x4F60;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x4E66;&#x5199;&#x65B0;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x6216;&#x91CD;&#x65B0;&#x5199;&#x4E66;&#x5199;&#x8BE5;&#x51FD;&#x6570;&#x3002;</li>
-<li>.clear &#x7528;&#x4E8E;&#x6E05;&#x9664;REPL&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4E0A;&#x4E0B;&#x6587;&#x5BF9;&#x8C61;&#x4E2D;&#x4FDD;&#x5B58;&#x7684;&#x6240;&#x6709;&#x53D8;&#x91CF;&#x4E0E;&#x51FD;&#x6570;&#x3002;</li>
-<li>.exit &#x8BE5;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x9000;&#x51FA;repl&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x3002;</li>
-<li>.help &#x8BE5;&#x547D;&#x4EE4;&#x5C06;&#x5728;&#x7A97;&#x53E3;&#x4E2D;&#x663E;&#x793A;REPL&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x57FA;&#x7840;&#x547D;&#x4EE4;&#x3002;</li>
-<li>.save &#x8BE5;&#x547D;&#x4EE4;&#x628A;&#x4F60;&#x5728;REPL&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4E2D;&#x8F93;&#x5165;&#x7684;&#x6240;&#x6709;&#x8868;&#x8FBE;&#x5F0F;&#x4FDD;&#x5B58;&#x5230;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</li>
-<li>.load &#x8BE5;&#x547D;&#x4EE4;&#x5C06;&#x628A;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x4FDD;&#x5B58;&#x7684;&#x6240;&#x6709;&#x8868;&#x8FBE;&#x5F0F;&#x4F9D;&#x6B21;&#x52A0;&#x8F7D;&#x5230;&#x4E86;REPL&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4E2D;&#x3002;</li>
-</ul>
-<pre><code class="lang-js"> <span class="hljs-comment">//&#x4F7F;&#x7528;.save .load</span>
-.save ./save.js
+<h2 id="&#x6267;&#x884C;&#x987A;&#x5E8F;">&#x6267;&#x884C;&#x987A;&#x5E8F;</h2>
+<p>js&#x4F18;&#x5148;&#x6267;&#x884C;&#x5B8F;&#x4EFB;&#x52A1;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#x5FAE;&#x4EFB;&#x52A1;&#x3002;&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x5B8F;&#x4EFB;&#x52A1;&#xFF0C;&#x5148;&#x770B;&#x5B8F;&#x4EFB;&#x52A1;&#x91CC;&#x7684;&#x5FAE;&#x4EFB;&#x52A1;&#xFF0C;&#x628A;&#x4ED6;&#x4EEC;&#x52A0;&#x5165;&#x5FAE;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x3002;&#x6BCF;&#x6B21;&#x5B8F;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#x4F1A;&#x6E05;&#x7A7A;(&#x6267;&#x884C;)&#x5F53;&#x524D;&#x5B8F;&#x4EFB;&#x52A1;&#x4E2D;&#x7684;&#x5FAE;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x3002;promise&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x4F4E;&#x4E8E;process.next&#x3002;&#x5728;&#x6267;&#x884C;setTimeout&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x4F46;&#x5F00;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x3002;</p>
+<pre><code class="lang-js">&#x6267;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;
+<span class="hljs-comment">// &#x9996;&#x5148;&#x6267;&#x884C;&#x5B8F;&#x4EFB;&#x52A1; &#x4E3B;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;JavaScript</span>
 
-.load ./save.js
+main 
+<span class="hljs-comment">//process.next1 &#x9047;&#x5230;&#x5FAE;&#x4EFB;&#x52A1;&#xFF0C;&#x52A0;&#x5165;&#x961F;&#x5217;</span>
+<span class="hljs-comment">// &#x7EE7;&#x7EED;&#x6267;&#x884C;</span>
+<span class="hljs-comment">// &#x9047;&#x5230;timeout&#x662F;&#x5B8F;&#x4EFB;&#x52A1;,&#x5F02;&#x6B65;&#x6267;&#x884C;,&#x7B49;&#x5230;&#x65F6;&#x95F4;&#x4E86;&#x8FDB;&#x884C;&#x6267;&#x884C;&#xFF0C;&#x6302;&#x8D77;</span>
+<span class="hljs-comment">// &#x9047;&#x5230;Promise &#x5FAE;&#x4EFB;&#x52A1; &#xFF0C;&#x6267;&#x884C;&#x5230;console.log(&apos;promise&apos;)&#x662F;&#x4E3B;&#x7A0B;&#x5E8F;</span>
+ promise 
+<span class="hljs-comment">// &#x7EE7;&#x7EED;&#x6267;&#x884C;&#x5230;</span>
+<span class="hljs-comment">// &#x9047;&#x5230; main2</span>
+main2
+<span class="hljs-comment">// &#x4E3B;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x5B8C;&#x6210; &#xFF0C;&#x8FDB;&#x884C;&#x5FAE;&#x4EFB;&#x52A1;</span>
+process.nextTick1
+<span class="hljs-comment">// &#x7EE7;&#x7EED;&#x6267;&#x884C;</span>
+promise then 
+<span class="hljs-comment">// &#x5B8F;&#x4EFB;&#x52A1;&#x4E2D;&#x7684;setTimeout</span>
+setTimeout 
+process.nextTick
 </code></pre>
 
                                 
@@ -303,12 +321,12 @@ con.testFunction = <span class="hljs-function"><span class="hljs-keyword">functi
 
             
                 
-                <a href="../npm/npm.html" class="navigation navigation-prev " aria-label="Previous page: NPM">
+                <a href="../event/event.html" class="navigation navigation-prev " aria-label="Previous page: Event">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../timer/timer.html" class="navigation navigation-next " aria-label="Next page: Timer">
+                <a href="../global/global.html" class="navigation navigation-next " aria-label="Next page: GLOBAL">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -319,7 +337,7 @@ con.testFunction = <span class="hljs-function"><span class="hljs-keyword">functi
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"REPL","level":"1.1.2","depth":2,"next":{"title":"Timer","level":"1.1.3","depth":2,"path":"note/timer/timer.md","ref":"note/timer/timer.md","articles":[]},"previous":{"title":"NPM","level":"1.1.1","depth":2,"path":"note/npm/npm.md","ref":"note/npm/npm.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/repl/REPL.md","mtime":"2019-12-09T03:40:51.261Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-09T03:54:20.901Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"MICROTASK","level":"1.1.6","depth":2,"next":{"title":"GLOBAL","level":"1.1.7","depth":2,"path":"note/global/global.md","ref":"note/global/global.md","articles":[]},"previous":{"title":"Event","level":"1.1.5","depth":2,"path":"note/event/event.md","ref":"note/event/event.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/microtask/task.md","mtime":"2019-12-09T03:51:37.699Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-09T03:54:20.901Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
